@@ -1,0 +1,23 @@
+[2024-07-18 06:35:08,619] {taskinstance.py:851} INFO - Dependencies all met for <TaskInstance: xcom_example_dag.pull_task 2024-02-23T00:00:00+00:00 [queued]>
+[2024-07-18 06:35:08,648] {taskinstance.py:851} INFO - Dependencies all met for <TaskInstance: xcom_example_dag.pull_task 2024-02-23T00:00:00+00:00 [queued]>
+[2024-07-18 06:35:08,656] {taskinstance.py:1042} INFO - 
+--------------------------------------------------------------------------------
+[2024-07-18 06:35:08,656] {taskinstance.py:1043} INFO - Starting attempt 1 of 2
+[2024-07-18 06:35:08,657] {taskinstance.py:1044} INFO - 
+--------------------------------------------------------------------------------
+[2024-07-18 06:35:08,713] {taskinstance.py:1063} INFO - Executing <Task(PythonOperator): pull_task> on 2024-02-23T00:00:00+00:00
+[2024-07-18 06:35:08,728] {standard_task_runner.py:52} INFO - Started process 2900 to run task
+[2024-07-18 06:35:08,746] {standard_task_runner.py:76} INFO - Running: ['airflow', 'tasks', 'run', 'xcom_example_dag', 'pull_task', '2024-02-23T00:00:00+00:00', '--job-id', '469', '--pool', 'default_pool', '--raw', '--subdir', 'DAGS_FOLDER/xcom.py', '--cfg-path', '/tmp/tmp1jceae4o', '--error-file', '/tmp/tmpudwx4lat']
+[2024-07-18 06:35:08,754] {standard_task_runner.py:77} INFO - Job 469: Subtask pull_task
+[2024-07-18 06:35:09,173] {logging_mixin.py:104} INFO - Running <TaskInstance: xcom_example_dag.pull_task 2024-02-23T00:00:00+00:00 [running]> on host a868c7bacc12
+[2024-07-18 06:35:09,440] {taskinstance.py:1257} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=airflow
+AIRFLOW_CTX_DAG_ID=xcom_example_dag
+AIRFLOW_CTX_TASK_ID=pull_task
+AIRFLOW_CTX_EXECUTION_DATE=2024-02-23T00:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2024-02-23T00:00:00+00:00
+[2024-07-18 06:35:09,511] {logging_mixin.py:104} INFO - Pulled message: Hello from push_function!
+[2024-07-18 06:35:09,511] {python.py:118} INFO - Done. Returned value was: None
+[2024-07-18 06:35:09,552] {taskinstance.py:1166} INFO - Marking task as SUCCESS. dag_id=xcom_example_dag, task_id=pull_task, execution_date=20240223T000000, start_date=20240718T063508, end_date=20240718T063509
+[2024-07-18 06:35:09,921] {taskinstance.py:1220} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-07-18 06:35:09,990] {local_task_job.py:146} INFO - Task exited with return code 0
